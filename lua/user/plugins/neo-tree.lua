@@ -1,0 +1,13 @@
+return{
+  "nvim-neo-tree/neo-tree.nvim",
+  opts=function(_,default_Opts)
+    default_Opts.filesystem.hijack_netrw_behavior="open_default";
+    default_Opts.filesystem.filtered_items={
+	    hide_gitignored=false;
+    hide_dotfiles=false;
+    hide_by_pattern={
+      "node_modules/*",
+        ".git/*",
+    }}
+  end
+}
